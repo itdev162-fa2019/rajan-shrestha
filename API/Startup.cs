@@ -32,12 +32,12 @@ namespace API
             services.AddCors(opt =>
             {
                 opt.AddPolicy(CorsPolicy, policyBuilder =>
-                {
-                    policyBuilder
-                    .WithOrigins("http://localhost:3000")
-                    .AllowAnyHeader()
-                    .AllowAnyMethod();
-                });
+          {
+                  policyBuilder
+                .WithOrigins("http://localhost:3000")
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+              });
             });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<DataContext>(opt =>
@@ -56,10 +56,10 @@ namespace API
             else
             {
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                //app.UseHsts();
+                // app.UseHsts();
             }
 
-            //app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
             app.UseCors(CorsPolicy);
             app.UseMvc();
         }
