@@ -1,0 +1,17 @@
+.item {
+    padding: 10px;
+    border: solid 1px  transparent;
+}
+
+.item:hover {
+    background-color: #eeeeee;
+    border-color: #aaaaaa;
+    cursor: pointer;
+}
+
+.item p {
+    max-width: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
